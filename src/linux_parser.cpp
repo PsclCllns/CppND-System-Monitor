@@ -241,6 +241,7 @@ int LinuxParser::RunningProcesses()
       }
     }
   }
+  return 0;
 }
 
 // DONE: Read and return the command associated with a process
@@ -281,7 +282,7 @@ string LinuxParser::Ram(int pid)
 
 // DONE: Read and return the user ID associated with a process
 // REMOVE: [[maybe_unused]] once you define the function
-string LinuxParser::Uid(int pid[[maybe_unused]])
+string LinuxParser::Uid(int pid)
 {
   string line;
   std::ifstream stream(kProcDirectory + std::to_string(pid) + kStatusFilename);

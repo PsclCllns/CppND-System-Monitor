@@ -9,7 +9,7 @@ It contains relevant attributes as shown below
 class Process {
  public:
   Process(){}
-  Process(int pid,std::string user,std::string command,float cpuUtil,std::string ram,long int upTime) : pid(pid),user(user),command(command),cpuUtil(cpuUtil),ram(ram),upTime(upTime) {}
+  Process(int pid,std::string user,std::string command,float cpuUtil,std::string ram,long int upTime) : pid(pid),user(user),command(command),ram(ram),cpuUtil(cpuUtil),upTime(upTime) {}
   int Pid();                               // TODO: See src/process.cpp
   std::string User();                      // TODO: See src/process.cpp
   std::string Command();                   // TODO: See src/process.cpp
@@ -21,10 +21,10 @@ class Process {
 
   // DONE: Declare any necessary private members
  private:
-  int pid=0;
+  int pid;
   std::string user, command, ram;
-  float cpuUtil=0;
-  long int upTime=0;
+  float cpuUtil;
+  long int upTime;
   
 };
 
